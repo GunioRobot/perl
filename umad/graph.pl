@@ -1,8 +1,3 @@
-# UMAD (Users on Mikrotik Along the Day) | Igor Lins <snake@bsd.com.br>
-# Created 2009-10-27, based on LAG, has be done in 14:30-??:?? minutes
-
-# Licensed under GPL v2 (?)
-
 use GD::Graph::area;
 use GD::Graph::colour;
 

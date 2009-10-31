@@ -2,8 +2,8 @@ use GD::Graph::lines;
 
 print STDERR "Processing graph\n";
 
-@data =  read_data_from_csv("data.cvs")
-	or die "Cannot read data from data.cvs";
+@data =  read_data_from_csv("data.csv")
+	or die "Cannot read data from data.csv";
 
 $my_graph = new GD::Graph::lines( );
 

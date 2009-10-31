@@ -2,8 +2,8 @@ use GD::Graph::lines;
 
 print STDERR "Processing graph\n";
 
-@data =  read_data_from_csv("data.cvs")
-	or die "Cannot read data from data.cvs";
+@data =  read_data_from_csv("data.csv")
+	or die "Cannot read data from data.csv";
 
 $my_graph = new GD::Graph::lines( );
 
@@ -12,10 +12,7 @@ $my_graph->set(
 	y_label => 'Porcentagem',
 	title => 'Variacao dos acessos totais e os cache hits',
 	y_max_value => 1500000,
-#	y_tick_number => 6,
-#	y_label_skip => 2,
 	markers => [ 1, 5 ],
-
 	transparent => 0,
 );
 
