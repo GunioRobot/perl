@@ -3,11 +3,11 @@ use GD::Graph::colour;
 
 print STDERR "Processing graph\n";
 
-$my_input = "/var/share/snake/perl/umad/users.log";
+$my_input = "/var/share/snake/perl/umad/users.csv";
 $my_output = "/var/share/snake/perl/umad/data";
 
 @data =  read_data_from_csv("$my_input")
-	or die "Cannot read data from users.log";
+	or die "Cannot read data from users.csv";
 
 $my_graph = new GD::Graph::area(3000,300);
 
