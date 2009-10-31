@@ -1,7 +1,7 @@
 	UMAD (Users on Mikrotik Along the Day)
 
-	Initial release <2009-10-27>
-		Based on LAG (uptime)
+	<2009-10-27>
+		Initial release. Based on LAG.
 
-	Second release <2009-10-31>
-		Created a function to get the users number
+	<2009-10-31>
+		Created a function to get the users number.

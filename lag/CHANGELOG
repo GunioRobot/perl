@@ -1,0 +1,15 @@
+	LAG (Load Average Graph
+
+	<2009-10-20>
+		Initial release.
+			echo -n `date +%H:%M`,
+			echo -n `uptime | cut -d" " -f12 | tr -d [:blank:]`
+			echo -n `uptime | cut -d" " -f13 | tr -d [:blank:]`
+			echo `uptime | cut -d" " -f14 | tr -d [:blank:]`
+		Total fail, this.
+
+	<2009-10-24>
+		One line to get avg data from uptime.
+
+	<2009-10-31>
+		Created a function to get avg data.

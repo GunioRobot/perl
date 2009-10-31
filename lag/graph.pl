@@ -1,17 +1,12 @@
-# LAG (Load Average Graph) | Igor Lins <snake@bsd.com.br>
-# Created 2009-10-20, has be done in 30 minutes
-
-# Licensed under GPL v2 (?)
-
 use GD::Graph::lines;
 
 print STDERR "Processing graph\n";
 
-$my_input = "/var/share/snake/perl/uptime/avg.log";
-$my_output = "/var/share/snake/perl/uptime/data";
+$my_input = "/var/share/snake/perl/lag/avg.csv";
+$my_output = "/var/share/snake/perl/lag/data";
 
 @data =  read_data_from_csv("$my_input")
-	or die "Cannot read data from avg.log";
+	or die "Cannot read data from avg.csv";
 
 $my_graph = new GD::Graph::lines(3000,300);
 
@@ -20,8 +15,6 @@ $my_graph->set(
 	y_label => 'Load average',
 	title => 'Load average durante o dia',
 	y_max_value => 2.5,
-#	y_tick_number => 6,
-#	y_label_skip => 2,
 	markers => [ 1, 5 ],
 	transparent => 0,
 );

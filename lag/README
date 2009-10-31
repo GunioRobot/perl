@@ -1,0 +1,8 @@
+	LAG (Load Average Graph)
+		: Igor Lins <snake@bsd.com.br>
+		
+	Get the avg status and output in csv format. (sh)
+	Make a graph with the csv file. (perl)
+
+	Usage?
+		Schedule with cron and pipe to the avg.csv file.
