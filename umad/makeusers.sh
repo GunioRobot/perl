@@ -1,7 +1,7 @@
 #!/bin/sh
 
 M_IP="192.168.168.101" # Mikrotik IP
-FILE="/dev/shm/mikrotik.html"
+FILE=`mktemp`
 
 users(){
 	# Use grep and sed to `clean' the file and output only the users number
