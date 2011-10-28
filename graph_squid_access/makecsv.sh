@@ -17,7 +17,7 @@ while test $i -lt ${LIMITDAY}; do
 	fi
 	# Number of accesses
 	ACCESSES=`head -n 1 $TMP`
-	
+
 	# To fix the problem with numeration: 1 != 01 (form used by squid-graph)
 	if [ $i -lt 10 ]; then
 		lynx -auth pen:pceasy -dump ${URL}/${DATE}/0$i/ | grep "Total Cache Hits" | cut -d":" -f2 | cut -d" " -f2 > ${TMP}
@@ -26,7 +26,7 @@ while test $i -lt ${LIMITDAY}; do
 	fi
 	# N
 	TRAFFIC=`head -n 1 $TMP`
-	
+
 	# Add to the csv file
 	echo $i,$ACCESSES,$TRAFFIC >> $CSV
 done

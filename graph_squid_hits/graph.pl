@@ -7,7 +7,7 @@ print STDERR "Processing graph\n";
 
 $my_graph = new GD::Graph::lines( );
 
-$my_graph->set( 
+$my_graph->set(
 	x_label => 'Dia',
 	y_label => 'Porcentagem',
 	title => 'Variacao de cache hits e o trafego gerado',
@@ -32,7 +32,7 @@ sub save_chart
 
 	my $ext = $chart->export_format;
 
-	open(OUT, ">$name.$date.$ext") or 
+	open(OUT, ">$name.$date.$ext") or
 		die "Cannot open $name.$date.$ext for write: $!";
 	binmode OUT;
 	print OUT $chart->gd->$ext();

@@ -10,7 +10,7 @@ $my_output = "/var/share/snake/perl/lag/data";
 
 $my_graph = new GD::Graph::lines(3000,300);
 
-$my_graph->set( 
+$my_graph->set(
 	x_label => 'Horario',
 	y_label => 'Load average',
 	title => 'Load average durante o dia',
@@ -32,7 +32,7 @@ sub save_chart
 
 	my $ext = $chart->export_format;
 
-	open(OUT, ">$my_output/$name.$date.$ext") or 
+	open(OUT, ">$my_output/$name.$date.$ext") or
 		die "Cannot open $name.$date.$ext for write: $!";
 	binmode OUT;
 	print OUT $chart->gd->$ext();
